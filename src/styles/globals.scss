@@ -1,0 +1,153 @@
+// ================================
+// 🎨 Global SCSS Variables & Theme
+// ================================
+
+// Light theme variables
+:root {
+  --cream: #f5f3f0;
+  --dark: #1a1a1a;
+  --gold: #c9a961;
+  --light-gray: #e8e6e3;
+  --text-muted: #6b6b6b;
+
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+
+  --primary: #1a1a1a;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f8f8f8;
+  --secondary-foreground: #1a1a1a;
+
+  --muted: #e8e6e3;
+  --muted-foreground: #6b6b6b;
+
+  --accent: #e8e6e3;
+  --accent-foreground: #1a1a1a;
+
+  --destructive: #ff4d4d;
+  --destructive-foreground: #ffffff;
+
+  --border: #e0e0e0;
+  --input: #e0e0e0;
+  --ring: #bfbfbf;
+
+  --radius: 10px;
+}
+
+// Dark theme
+.dark {
+  --background: #1a1a1a;
+  --foreground: #f5f3f0;
+
+  --card: #1a1a1a;
+  --card-foreground: #f5f3f0;
+
+  --primary: #f5f3f0;
+  --primary-foreground: #1a1a1a;
+
+  --secondary: #2b2b2b;
+  --secondary-foreground: #f5f3f0;
+
+  --muted: #2b2b2b;
+  --muted-foreground: #a0a0a0;
+
+  --accent: #2b2b2b;
+  --accent-foreground: #f5f3f0;
+
+  --destructive: #b34747;
+  --destructive-foreground: #ffffff;
+
+  --border: #2b2b2b;
+  --input: #2b2b2b;
+  --ring: #505050;
+}
+
+// ================================
+// 🧩 Global Reset & Base Styles
+// ================================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden; /* optional */
+}
+
+body {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif, 'Playfair Display', serif);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+// ================================
+// 💅 Utility Classes
+// ================================
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.bg-card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.border {
+  border: 1px solid var(--border);
+}
+
+.rounded {
+  border-radius: var(--radius);
+}
+.input {
+  background-color: var(--input);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}

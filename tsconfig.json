@@ -14,7 +14,19 @@
     "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@features/*": ["./src/features/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@processes/*": ["./src/processes/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@api/*": ["./src/shared/api/*"],
+      "@lib/*": ["./src/shared/lib/*"],
+      "@types/*": ["./src/shared/types/*"],
+      "@ui/*": ["./src/shared/ui/*"],
+      "@store/*": ["./src/store/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@src/*": ["./src/*"]
     }
   },
   "include": [

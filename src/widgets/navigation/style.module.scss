@@ -1,0 +1,22 @@
+.navLinks {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.navLinks a {
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+}
