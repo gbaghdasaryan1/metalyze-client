@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--cream);
   z-index: 1000;
   border-bottom: 1px solid var(--light-gray);
 }
@@ -15,14 +14,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: var(--dark);
 }
 
 .actions {
@@ -39,6 +30,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.3s ease;
+  color: var(--dark-gray);
 }
 
 .actions button:hover {

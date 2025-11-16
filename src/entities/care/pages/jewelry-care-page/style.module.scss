@@ -1,0 +1,378 @@
+.carePage {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../../../assets/images/care/care-hero.jpg') center / cover;
+  padding: 120px 20px 80px;
+  text-align: center;
+  color: white;
+}
+
+.heroContent h1 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.intro h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c2c2c;
+}
+
+.intro p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #666;
+}
+
+.generalCare {
+  margin-bottom: 100px;
+}
+
+.generalCare h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c2c2c;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tipCard {
+  background: #f9f7f4;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tipCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tipIcon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  color: #c9a961;
+}
+
+.tipIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tipCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+.tipCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.materialCare {
+  margin-bottom: 100px;
+}
+
+.materialCare h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #2c2c2c;
+}
+
+.materialSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.materialContent h3 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #2c2c2c;
+}
+
+.materialContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.materialContent li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: #666;
+}
+
+.materialContent li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #c9a961;
+  font-weight: bold;
+}
+
+.materialImage {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.materialImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cleaning {
+  margin-bottom: 100px;
+  background: #f9f7f4;
+  padding: 4rem;
+  border-radius: 12px;
+}
+
+.cleaning h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c2c2c;
+}
+
+.cleaningSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  text-align: center;
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  background: #c9a961;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.step h3 {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #2c2c2c;
+}
+
+.step p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.avoid {
+  margin-bottom: 100px;
+}
+
+.avoid h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c2c2c;
+}
+
+.avoidGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.avoidCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #c9a961;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.avoidCard h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+.avoidCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.professional {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  color: white;
+  padding: 4rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.professionalContent h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.professionalContent p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.professionalContent h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.professionalContent ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  text-align: left;
+}
+
+.professionalContent li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.professionalContent li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #c9a961;
+  font-weight: bold;
+}
+
+.ctaButton {
+  background: #c9a961;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: #b8964d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 60px 20px;
+  }
+
+  .intro h2,
+  .generalCare h2,
+  .materialCare h2,
+  .cleaning h2,
+  .avoid h2 {
+    font-size: 2rem;
+  }
+
+  .materialSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cleaningSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .professional {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .professionalContent h2 {
+    font-size: 2rem;
+  }
+
+  .professionalContent ul {
+    text-align: center;
+  }
+
+  .professionalContent li {
+    padding-left: 0;
+  }
+
+  .professionalContent li::before {
+    position: static;
+    margin-right: 0.5rem;
+  }
+}

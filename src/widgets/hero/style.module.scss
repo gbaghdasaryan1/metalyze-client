@@ -4,26 +4,38 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--cream);
+  /* Added background image with overlay */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-size: cover;
+  background-position: center;
   padding: 2rem;
-  //   margin-top: 80px;
 }
 
 .heroContent {
   max-width: 800px;
+  /* Added backdrop blur for better text readability */
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4rem 3rem;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
 
-  h1 {
-    font-size: clamp(3rem, 8vw, 6rem);
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.02em;
-  }
+.heroContent h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+  /* Changed text color to white for contrast */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-  p {
-    font-size: 1.125rem;
-    color: var(--text-muted);
-    margin-bottom: 2.5rem;
-    letter-spacing: 0.03em;
-  }
+.heroContent p {
+  font-size: 1.125rem;
+  /* Changed text color to white with opacity */
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.03em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .ctaButton {
@@ -35,10 +47,62 @@
   font-size: 0.95rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  cursor: pointer;
   transition: all 0.3s ease;
+}
 
-  &:hover {
-    background-color: var(--gold);
-    color: var(--dark);
+.ctaButton:hover {
+  background-color: var(--gold);
+  color: var(--dark);
+}
+
+.collections {
+  padding: 8rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 4rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 3rem 2rem;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 2.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 2rem 1rem;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .heroContent p {
+    font-size: 0.9rem;
+  }
+
+  .ctaButton {
+    padding: 0.5rem 2rem;
+    font-size: 0.85rem;
   }
 }

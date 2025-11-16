@@ -1,0 +1,36 @@
+.commitment {
+  padding: 6rem 2rem;
+  background-color: #f8f6f3;
+}
+
+.commitmentContent h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+.commitmentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.commitmentItem {
+  text-align: center;
+}
+
+.commitmentItem h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  color: #2c2c2c;
+}
+
+.commitmentItem p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+}

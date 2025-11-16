@@ -1,0 +1,382 @@
+.checkoutPage {
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  background: linear-gradient(to bottom, #faf8f5 0%, #ffffff 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #2c2c2c;
+}
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 64px;
+  gap: 24px;
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.stepNumber {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #d4c5b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #8b7355;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.progressStep.active .stepNumber {
+  background: #8b7355;
+  color: white;
+  border-color: #8b7355;
+}
+
+.stepLabel {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.progressStep.active .stepLabel {
+  color: #2c2c2c;
+}
+
+.progressLine {
+  width: 80px;
+  height: 2px;
+  background: #d4c5b0;
+}
+
+.checkoutContent {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.checkoutForm {
+  flex: 1;
+  background: white;
+  padding: 48px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: #2c2c2c;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c2c2c;
+  font-size: 14px;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d4c5b0;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  background: #faf8f5;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #8b7355;
+  background: white;
+}
+
+.formRow {
+  display: flex;
+  gap: 24px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px 32px;
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 32px;
+}
+
+.submitButton:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:disabled {
+  background: #999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.formActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.backButton {
+  flex: 1;
+  padding: 16px 32px;
+  background: white;
+  color: #2c2c2c;
+  border: 2px solid #d4c5b0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  border-color: #8b7355;
+  background: #faf8f5;
+}
+
+.orderSummary {
+  width: 400px;
+  background: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 120px;
+}
+
+.orderSummary h2 {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #2c2c2c;
+}
+
+.summaryItems {
+  margin-bottom: 24px;
+}
+
+.summaryItem {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summaryItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.summaryItem img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemName {
+  font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.itemQuantity {
+  font-size: 13px;
+  color: #666;
+}
+
+.itemPrice {
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.summaryDivider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 20px 0;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 15px;
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-top: 20px;
+}
+
+.successMessage {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.successIcon {
+  color: #4caf50;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.successMessage h2 {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #2c2c2c;
+}
+
+.successMessage p {
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.orderNumber {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8b7355;
+  margin: 24px 0 !important;
+}
+
+.confirmationText {
+  font-size: 14px;
+  margin-bottom: 32px !important;
+}
+
+.emptyCheckout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #faf8f5 0%, #ffffff 100%);
+}
+
+.emptyContent {
+  text-align: center;
+  max-width: 500px;
+  padding: 48px;
+}
+
+.emptyContent h1 {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #2c2c2c;
+}
+
+.emptyContent p {
+  color: #666;
+  margin-bottom: 32px;
+  font-size: 16px;
+}
+
+.shopButton {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #2c2c2c;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.shopButton:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 968px) {
+  .checkoutContent {
+    flex-direction: column;
+  }
+
+  .orderSummary {
+    width: 100%;
+    position: static;
+  }
+
+  .checkoutForm {
+    padding: 32px 24px;
+  }
+
+  .formRow {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .progressBar {
+    gap: 12px;
+  }
+
+  .progressLine {
+    width: 40px;
+  }
+
+  .stepLabel {
+    font-size: 12px;
+  }
+}

@@ -1,20 +1,20 @@
 .collections {
-  padding: 8rem 2rem;
-  max-width: 1400px;
+  padding: 3rem 0rem;
+  // max-width: 1400px;
   margin: 0 auto;
 }
 
 .sectionTitle {
   text-align: center;
   font-size: clamp(2.5rem, 5vw, 4rem);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   letter-spacing: 0.02em;
 }
 
 .collectionGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  // gap: 2rem;
 }
 
 .collectionCard {
@@ -53,5 +53,16 @@
   p {
     font-size: 0.95rem;
     opacity: 0.9;
+  }
+}
+
+@media (max-width: 768px) {
+  .collections {
+    padding: 4rem 0rem;
+  }
+
+  .sectionTitle {
+    font-size: clamp(2rem, 7vw, 3rem);
+    margin-bottom: 3rem;
   }
 }

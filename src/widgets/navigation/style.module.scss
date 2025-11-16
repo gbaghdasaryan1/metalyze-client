@@ -1,3 +1,29 @@
+.navigation {
+  width: 100%;
+  position: fixed;
+  background-color: var(--cream-opacity);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--dark);
+  font-style: italic;
+}
+
 .navLinks {
   display: flex;
   gap: 3rem;
@@ -5,7 +31,8 @@
 }
 
 .navLinks a {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   transition: color 0.3s ease;
@@ -15,8 +42,153 @@
   color: var(--gold);
 }
 
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.actions button:hover {
+  color: var(--gold);
+}
+
+/* Add cart button link styles */
+.cartButton {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cartButton:hover {
+  color: var(--gold);
+}
+
+/* Burger menu button styles */
+.burgerButton {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1002;
+}
+
+.burgerButton span {
+  width: 25px;
+  height: 2px;
+  background-color: var(--dark);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.burgerButton span.burgerOpen:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.burgerButton span.burgerOpen:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerButton span.burgerOpen:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile menu styles */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: var(--cream);
+  z-index: 1001;
+  transition: right 0.3s ease;
+  padding-top: 5rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobileMenu.mobileMenuOpen {
+  right: 0;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobileNavLinks a {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.mobileNavLinks a:hover {
+  color: var(--gold);
+}
+
+/* Overlay backdrop */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .navLinks {
     display: none;
+  }
+
+  /* Show burger button on mobile */
+  .burgerButton {
+    display: flex;
+  }
+
+  /* Hide search button on mobile */
+  .actions button:not(.burgerButton) {
+    display: none;
+  }
+
+  .container {
+    padding: 1rem 1.5rem;
   }
 }

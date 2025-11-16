@@ -5,6 +5,7 @@
 // Light theme variables
 :root {
   --cream: #f5f3f0;
+  --cream-opacity: #fffcfc4f;
   --dark: #1a1a1a;
   --gold: #c9a961;
   --light-gray: #e8e6e3;
@@ -79,15 +80,20 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden; /* optional */
+  // overflow-x: hidden; /* optional */
 }
 
 body {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  background-color: var(--background);
-  color: var(--foreground);
+  // font-family: var(--font-sans, 'Inter', sans-serif);
+  // background-color: var(--background);
+  // color: var(--foreground);
+  // line-height: 1.6;
+  // transition: background-color 0.3s ease, color 0.3s ease;
+
+  font-family: var(--font-sans);
+  color: var(--dark);
+  background-color: var(--cream);
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -96,10 +102,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif, 'Playfair Display', serif);
+  font-family: var(--font-serif);
   font-weight: 400;
   line-height: 1.2;
-  color: var(--foreground);
 }
 
 a {
@@ -110,8 +115,6 @@ a {
 button {
   font-family: inherit;
   cursor: pointer;
-  border: none;
-  background: none;
 }
 
 img {
